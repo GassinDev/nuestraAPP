@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Consulta de Leyes</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="tu_logo.png" alt="Logo de tu sitio">
+      <h1 id="ti">LegalEase - Consulta de Leyes   .</h1>
+      <nav class="enlace-izquierdo">
+        <a href="info.html">Información</a>
+      </nav>
+      <button class="abrir-chat" onclick="toggleChat()">Atención al cliente</button>
+<div id="chat-box" class="chat-box">
+  <div id="chat-messages" class="chat-messages">
+    <!-- Contenido del chat ficticio -->
+    <div class="mensaje">Asistente: ¡Hola! ¿En qué puedo ayudarte hoy?</div>
+    <div class="mensaje-usuario">
+      Usuario: <input type="text" id="mensajeUsuario" placeholder="Escribe...." oninput="enviarMensaje()">
+    </div>
+    <div id="respuestaAsistente" class="mensaje-asistente oculto"></div>
+    <!-- Agrega más mensajes según sea necesario -->
+  </div>
+</div>
+      <script>
+        function toggleChat() {
+          var chatBox = document.getElementById('chat-box');
+          chatBox.style.height = chatBox.style.height === '0px' ? '150px' : '0px';
+        }
+
+        function enviarMensaje() {
+  var inputUsuario = document.getElementById('mensajeUsuario');
+  var respuestaAsistente = document.getElementById('respuestaAsistente');
+
+  if (inputUsuario.value.trim() !== '') {
+    respuestaAsistente.classList.remove('oculto');
+    
+    respuestaAsistente.innerHTML = '<div class="mensaje">Asistente: En estos momentos no está disponible, ya que es un prototipo.</div>';
+  } else {
+    respuestaAsistente.classList.add('oculto');
+  }
+}
+      </script>
+    </div>
+    <label for="consulta">Selecciona una opción:</label>
+    <select id="consulta">
+        <option value="verLeyes" selected>Ver Leyes Disponibles</option>
+        <option value="buscarLey">Buscar Ley por palabra relaccionada</option>
+      </select>
+      
+    <div id="verLeyes" class="opcion">
+      <!-- Contenido para ver leyes -->
+      <h2>Leyes Disponibles</h2>
+      <ul>
+        <li>Ley de Derechos de Autor</li>
+        <li>Ley de Protección del Consumidor</li>
+        <li>Ley de Privacidad en Internet</li>
+        <li>Ley de Seguridad Alimentaria</li>
+        <li>Ley de Cambio Climático</li>
+        <li>Ley de Igualdad de Género</li>
+        <li>Ley de Salud Pública</li>
+        <li>Ley de Derechos Civiles</li>
+        <li>Ley de Educación Pública</li>
+        <li>Ley de Telecomunicaciones</li>
+        <li>Ley de Derechos Humanos</li>
+        <li>Ley de Protección del Medio Ambiente</li>
+        <li>Ley de Comercio Justo</li>
+        <li>Ley de Energías Renovables</li>
+        <li>Ley de Seguridad en el Trabajo</li>
+        <!-- Agrega más leyes según sea necesario -->
+      </ul>
+    </div>
+    <div id="buscarLey" class="opcion">
+      <!-- Contenido para buscar leyes por problema -->
+      <h2>Buscar Ley por palabra relaccionada</h2>
+      <label for="problema">Escribe :</label>
+      <textarea id="problema" rows="4"></textarea>
+      <button onclick="buscarLey()">Buscar Ley</button>
+      <div id="resultado"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
