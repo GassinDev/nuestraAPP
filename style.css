@@ -1,152 +1,164 @@
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: rgb(43, 43, 43)
-  }
-  
-  .container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(43, 43, 43)
+}
 
-  h1{
-    color: #f4f4f4;
-    margin-bottom: 20px;
-  }
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .header img {
-    max-height: 100px;
-  }
-  
-  .opcion {
-    display: none;
-  }
-  
-  /* Nueva regla CSS para posicionar en la esquina superior izquierda */
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #f4f4f4;
+  margin-bottom: 20px;
+}
+
 .header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
 
-  .atencion-cliente {
-    position: absolute;
-    top: 40px;
-    right: -180px; /* Ajusta el valor del margen derecho según tus preferencias */
-    background-color: #ffcc00;
-    padding: 10px;
-    border-radius: 5px;
-    color: #333;
-    font-weight: bold;
-  }
-  .wrapper {
-    position: relative;
-  }
-  
+.header img {
+  max-height: 100px;
+}
 
-  nav {
-    display: block;
-    margin: 10px auto;
-    padding: 5px 15px;
-    font-size: 16px;
-    color: #000000;
-    text-decoration: none;
-    background-color: #FFD700; /* Amarillo */
-    border: 2px solid #000000; /* Rojo */
-    border-radius: 8px; /* Bordes redondeados */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: #333;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease; /* Agrega transición para un cambio suave de color de fondo */
-  }
-  
-  nav a:hover {
-    background-color: #FFA500; /* Amarillo más oscuro al pasar el ratón */
-    text-decoration: underline;
-  }
+.opcion {
+  display: none;
+}
 
-  .abrir-chat{
-    display: block;
-    margin: 10px auto;
-    padding: 5px 15px;
-    font-size: 16px;
-    color: #000000;
-    text-decoration: none;
-    background-color: #FFD700; /* Amarillo */
-    border: 2px solid #000000; /* Rojo */
-    border-radius: 8px; /* Bordes redondeados */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .abrir-chat:hover {
-    background-color: #FFA500; /* Amarillo más oscuro al pasar el ratón */
-    text-decoration: underline;
-  }
+/* Nueva regla CSS para posicionar en la esquina superior izquierda */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+}
 
-  
-  
-  .chat-box {
-    height: 0;
-    overflow: hidden;
-    transition: height 0.3s ease;
-    background-color: #f1f1f1;
-    padding: 10px;
-    margin-top: 20px;
-    border-radius: 4px;
-  }
-  
-  .mensaje,
-  .mensaje-usuario {
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 4px;
-  }
-  
-  .mensaje {
-    background-color: #4CAF50;
-    color: #fff;
-  }
-  
-  .mensaje-usuario {
-    background-color: #ddd;
-  }
+.atencion-cliente {
+  position: absolute;
+  top: 40px;
+  right: -180px;
+  /* Ajusta el valor del margen derecho según tus preferencias */
+  background-color: #ffcc00;
+  padding: 10px;
+  border-radius: 5px;
+  color: #333;
+  font-weight: bold;
+}
+
+.wrapper {
+  position: relative;
+}
+
+
+nav {
+  display: block;
+  margin: 10px auto;
+  padding: 5px 15px;
+  font-size: 16px;
+  color: #000000;
+  text-decoration: none;
+  background-color: #FFD700;
+  /* Amarillo */
+  border: 2px solid #000000;
+  /* Rojo */
+  border-radius: 8px;
+  /* Bordes redondeados */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  /* Agrega transición para un cambio suave de color de fondo */
+}
+
+nav a:hover {
+  background-color: #FFA500;
+  /* Amarillo más oscuro al pasar el ratón */
+  text-decoration: underline;
+}
+
+.abrir-chat {
+  display: block;
+  margin: 10px auto;
+  padding: 5px 15px;
+  font-size: 16px;
+  color: #000000;
+  text-decoration: none;
+  background-color: #FFD700;
+  /* Amarillo */
+  border: 2px solid #000000;
+  /* Rojo */
+  border-radius: 8px;
+  /* Bordes redondeados */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.abrir-chat:hover {
+  background-color: #FFA500;
+  /* Amarillo más oscuro al pasar el ratón */
+  text-decoration: underline;
+}
+
+
+
+.chat-box {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
+.mensaje,
+.mensaje-usuario {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.mensaje {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+.mensaje-usuario {
+  background-color: #ddd;
+}
 
 /* Consulta de medios para dispositivos móviles */
 @media only screen and (max-width: 600px) {
-    .container {
-        width: 90%;
-        max-width: 100%;
-    }
+  .container {
+    width: 90%;
+    max-width: 100%;
+  }
 
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-bottom: 100px;
-    }
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 100px;
+  }
 
-    .header img {
-        max-width: 100%;
-    }
+  .header img {
+    max-width: 100%;
+  }
 }
