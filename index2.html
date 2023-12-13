@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Consulta de Leyes</title>
+  </head>
+  <body>
+    <div id="splash-screen">
+      <img id="splash-logo" src="tu_logo.png" alt="Logo de tu sitio" />
+      <div id="splash-title">LegalEase - Consulta de Leyes .</div>
+    </div>
+    <div class="container">
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          setTimeout(function () {
+            document.getElementById("splash-screen").style.opacity = "0";
+          }, 1500); // 3000 milisegundos (3 segundos)
+        });
+      </script>
+      <div class="header">
+        <img src="tu_logo.png" alt="Logo de tu sitio" />
+        <h1 id="ti">LegalEase - Consulta de Leyes .</h1>
+        <nav class="enlace-izquierdo">
+          <a href="info.html">Información</a>
+        </nav>
+        <button class="abrir-chat" onclick="toggleChat()">
+          Atención al cliente
+        </button>
+        <div id="chat-box" class="chat-box">
+          <div id="chat-messages" class="chat-messages">
+            <!-- Contenido del chat ficticio -->
+            <div class="mensaje">
+              Asistente: ¡Hola! ¿En qué puedo ayudarte hoy?
+            </div>
+            <div class="mensaje-usuario">
+              Usuario:
+              <input
+                type="text"
+                id="mensajeUsuario"
+                placeholder="Escribe...."
+                oninput="enviarMensaje()"
+              />
+            </div>
+            <div id="respuestaAsistente" class="mensaje-asistente oculto"></div>
+            <!-- Agrega más mensajes según sea necesario -->
+          </div>
+        </div>
+        <script>
+          function toggleChat() {
+            var chatBox = document.getElementById("chat-box");
+            chatBox.style.height =
+              chatBox.style.height === "0px" ? "150px" : "0px";
+          }
+
+          function enviarMensaje() {
+            var inputUsuario = document.getElementById("mensajeUsuario");
+            var respuestaAsistente =
+              document.getElementById("respuestaAsistente");
+
+            if (inputUsuario.value.trim() !== "") {
+              respuestaAsistente.classList.remove("oculto");
+
+              respuestaAsistente.innerHTML =
+                '<div class="mensaje">Asistente: En estos momentos no está disponible, ya que es un prototipo.</div>';
+            } else {
+              respuestaAsistente.classList.add("oculto");
+            }
+          }
+        </script>
+      </div>
+      <div class="container">
+        <label for="consulta">Selecciona una opción:</label>
+        <select id="consulta">
+          <option value="verLeyes" selected>Ver Leyes Disponibles</option>
+          <option value="buscarLey">Buscar Ley por palabra relaccionada</option>
+        </select>
+      </div>
+
+      <div id="verLeyes" class="opcion">
+        <!-- Contenido para ver leyes -->
+        <h2>Leyes Disponibles</h2>
+        <ul>
+          <li>
+            <span>Ley de Derechos de Autor</span>
+            <button class="ver-video" data-video-id="x4wNeX9wf18">Ver Video</button>
+          </li>
+          <li>
+            <span>Ley de Protección del Consumidor</span>
+            <button class="ver-video" data-video-id="Ws8y8cgXo6k">Ver Video</button>
+          </li>
+          <li>
+            <span>Ley de Privacidad en Internet</span>
+            <button class="ver-video" data-video-id="Lcrvgby_8E8">Ver Video</button>
+          </li>
+          <li>
+            <span>Ley de Seguridad Alimentaria</span>
+            <button class="ver-video" data-video-id="QN-cKzmqazY">Ver Video</button>
+          </li>
+          <li>
+            <span>Ley de Cambio Climático</span>
+            <button class="ver-video" data-video-id="acBCHmS6XCs">Ver Video</button>
+          </li>
+          <li>
+            <span>Ley de Igualdad de Género</span>
+            <button class="ver-video" data-video-id="SVPoNxAIlXU">Ver Video</button>
+          </li>
+          <li>
+            <span>Ley de Salud Pública</span>
+            <button class="ver-video" data-video-id="Zwz0_jbpj94">Ver Video</button>
+          </li>
+          <li>
+            <span>Ley de Derechos Civiles</span>
+            <button class="ver-video" data-video-id="J3Hr7Q2iv-s">Ver Video</button>
+          </li>
+          <li>
+            <span>Ley de Educación Pública</span>
+            <button class="ver-video" data-video-id="5A-tfzgDksU">Ver Video</button>
+          </li>
+          <li>
+            <span>Ley de Telecomunicaciones</span>
+            <button class="ver-video" data-video-id="cXGuIF_aFX8">Ver Video</button>
+          </li>
+          <li>
+            <span>Ley de Derechos Humanos</span>
+            <button class="ver-video" data-video-id="cQyEZ5erG6k">Ver Video</button>
+          </li>
+          <li>
+            <span>Ley de Protección del Medio Ambiente</span>
+            <button class="ver-video" data-video-id="qGi6Ubo6_oc">Ver Video</button>
+          </li>
+          <li>
+            <span>Ley de Comercio Justo</span>
+            <button class="ver-video" data-video-id="jqOM0PKuWds">Ver Video</button>
+          </li>
+          <li>
+            <span>Ley de Energías Renovables</span>
+            <button class="ver-video" data-video-id="pKm6Y0oCs9Y">Ver Video</button>
+          </li>
+          <li>
+            <span>Ley de Seguridad en el Trabajo</span>
+            <button class="ver-video" data-video-id="y6jhr7QLNug">Ver Video</button>
+          </li>
+          <!-- Agrega más leyes según sea necesario -->
+        </ul>
+      </div>
+      <div id="buscarLey" class="opcion">
+        <!-- Contenido para buscar leyes por problema -->
+        <h2>Buscar Ley por palabra relaccionada</h2>
+        <label for="problema">Escribe :</label>
+        <textarea id="problema" rows="4"></textarea>
+        <button onclick="buscarLey()">Buscar Ley</button>
+        <div id="resultado"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

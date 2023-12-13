@@ -70,3 +70,21 @@ document.addEventListener('DOMContentLoaded', function () {
       resultadoDiv.innerHTML = '<p>No se encontraron leyes relacionadas.</p>';
     }
   }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Obtén todos los elementos con la clase "ver-video"
+    var verVideoButtons = document.querySelectorAll(".ver-video");
+  
+    // Asigna un evento de clic a cada botón
+    verVideoButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        // Obtiene el valor del atributo data-video-id
+        var videoId = this.getAttribute("data-video-id");
+  
+        // Redirige a la página de YouTube con el video correspondiente
+        if (videoId) {
+          window.location.href = "https://www.youtube.com/watch?v=" + videoId;
+        }
+      });
+    });
+  });
