@@ -14,11 +14,16 @@
     <div class="container">
       <script>
         document.addEventListener("DOMContentLoaded", function () {
-          setTimeout(function () {
-            document.getElementById("splash-screen").style.opacity = "0";
-          }, 1500); // 3000 milisegundos (3 segundos)
+            setTimeout(function () {
+                var splashScreen = document.getElementById("splash-screen");
+                splashScreen.style.opacity = "0";
+    
+                setTimeout(function () {
+                    splashScreen.style.display = "none";
+                }, 1000); // 1000 milisegundos (1 segundo)
+            }, 1500); // 3000 milisegundos (3 segundos)
         });
-      </script>
+    </script>
       <div class="header">
         <img src="tu_logo.png" alt="Logo de tu sitio" />
         <h1 id="ti">LegalEase - Consulta de Leyes .</h1>
